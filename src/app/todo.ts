@@ -5,6 +5,21 @@ export class Todo {
     private _complete: boolean;
     private _date: string;
 
+     public static toJson(todo: Todo) {
+        return {
+            title: todo.getTitle,
+            description: todo.getDescription,
+            id: todo.getId,
+            complete: todo.getComplete,
+            date: todo.getDate,
+        }
+    }
+
+    public static fromJson(todo: any): Todo {
+        return new Todo (todo.title, todo.description, todo.id, todo.complete, todo.date);
+    }
+
+
     constructor (title:string, description?: string, id?:number, complete?: boolean, date?:string) {
         
         this._title = title;
@@ -37,4 +52,21 @@ export class Todo {
     public get getId() : number {
         return this._id;
     }
+
+     public get getTitle() : string {
+        return this._title;
+    }
+
+    public get getDate() : string {
+        return this._date;
+    }
+
+    public get getComplete() : boolean {
+        return this._complete;
+    }
+
+    public get getDescription() : string {
+        return this._description;
+    }
+
 }
