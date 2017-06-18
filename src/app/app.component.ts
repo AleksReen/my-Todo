@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from './todo';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+ testTodo: Todo;
+
+ constructor (){
+    this.testTodo = new Todo ("testTodo");
+    console.log(this.testTodo);
+ }
+
+
 }
