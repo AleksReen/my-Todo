@@ -18,4 +18,15 @@
                
             </li>
         </ul>
+
+        <md-list>
+            <h3 md-subheader>Todo</h3>
+                 <md-list-item *ngFor="let todo of todoBaseList">
+                     <md-checkbox class="example-margin">{{todo.getTitle}}</md-checkbox>
+                     <h4></h4>
+                 </md-list-item>
+        <md-divider></md-divider>
+               
+        </md-list>
+
     </section>
