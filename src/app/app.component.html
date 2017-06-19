@@ -1,21 +1,9 @@
 <section>
 
-    <header>
-        <h1>myTodo</h1><br>
-        <input type="textbox" name="" value="" placeholder="enter todo"><br><br>
-        <textarea rows="" cols="" placeholder="enter description"></textarea><br><br>
-        <button>Add todo</button>
-    </header>
+    <app-todo-header (create)= "addTodo ($event)"></app-todo-header>
 
-    <section>
-        <ul *ngFor="let todo of todoBase">
-            <li>
-                {{todo.getTitle}}
-            </li>
-        </ul>
-    </section>
+    <app-todo-list [(todoBaseList)] = 'todoBaseList' (delete)="deleteTodo($event)"></app-todo-list>
 
-    <footer>
+    <app-todo-footer></app-todo-footer>
 
-    </footer>
 </section>

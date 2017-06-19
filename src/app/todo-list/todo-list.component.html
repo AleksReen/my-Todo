@@ -1,0 +1,21 @@
+<section>
+        <ul *ngFor="let todo of todoBaseList">
+            <li>
+                <div>
+                    <input type="checkbox" name="" value="">
+                     {{todo.getTitle}}
+                     <span>{{todo.getDate}}</span>
+                     <button (click)="deleteTodo (todo.getId)">X</button>
+                     <hr>
+                     <div>
+                         <h6>description</h6>
+                         <p>
+                             <span>{{todo.getDescription}}</span>
+                         </p>
+                     </div>
+                     
+                </div>
+               
+            </li>
+        </ul>
+    </section>
