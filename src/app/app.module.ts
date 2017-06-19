@@ -9,6 +9,10 @@ import { TodoHeaderComponent } from './todo-header/todo-header.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
 
+import { MaterialModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { TodoFooterComponent } from './todo-footer/todo-footer.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdCheckboxModule
   ],
   providers: [TodosDataService],
   bootstrap: [AppComponent]

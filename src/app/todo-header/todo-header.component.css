@@ -1,0 +1,20 @@
+header {}
+
+.header__title {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, 100);
+    width: 100%;
+}
+
+.header__conteiner-component {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__conteiner-button {
+    display: flex;
+    justify-content: flex-end;
+}

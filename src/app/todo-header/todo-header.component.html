@@ -1,6 +1,25 @@
-    <header>
-        <h1>myTodo</h1><br>
-        <input type="textbox" name="" value="" placeholder="enter todo" [(ngModel)]="title"><br><br>
-        <textarea rows="" cols="" placeholder="enter description" [(ngModel)]="description"></textarea><br><br>
-        <button (click)="createTodo ()">Add todo</button>
-    </header>
+<header>
+
+    <md-toolbar color="primary">
+        <h1 class="header__title">my Todos</h1>
+    </md-toolbar>
+
+    <br>
+
+
+    <div class="header__conteiner-component">
+        <md-input-container class="example-full-width">
+            <input mdInput placeholder="Todo" [(ngModel)]="title">
+        </md-input-container>
+
+        <md-input-container class="example-full-width">
+            <textarea mdInput placeholder="Description" [(ngModel)]="description"></textarea>
+        </md-input-container>
+
+        <div class="header__conteiner-button">
+            <button md-fab (click)="createTodo ()"><md-icon>check</md-icon></button>
+        </div>
+    </div>
+
+
+</header>
