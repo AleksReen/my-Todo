@@ -1,32 +1,24 @@
 <section>
-        <ul *ngFor="let todo of todoBaseList">
-            <li>
-                <div>
-                    <input type="checkbox" name="" value="">
-                     {{todo.getTitle}}
-                     <span>{{todo.getDate}}</span>
-                     <button (click)="deleteTodo (todo.getId)">X</button>
-                     <hr>
-                     <div>
-                         <h6>description</h6>
-                         <p>
-                             <span>{{todo.getDescription}}</span>
-                         </p>
-                     </div>
-                     
-                </div>
-               
-            </li>
-        </ul>
 
-        <md-list>
-            <h3 md-subheader>Todo</h3>
-                 <md-list-item *ngFor="let todo of todoBaseList">
-                     <md-checkbox class="example-margin">{{todo.getTitle}}</md-checkbox>
-                     <h4></h4>
-                 </md-list-item>
-        <md-divider></md-divider>
-               
-        </md-list>
 
+    
+        <div *ngFor="let todo of todoBaseList">
+           
+            
+                <div class="list__conteiner">
+
+
+     
+    <div class="list__conteiner-right">
+         <md-checkbox class="example-margin"></md-checkbox>
+         <h3> {{todo.getTitle}}</h3> 
+    </div>
+
+    <div class="list__conteiner-left">
+        <span>{{todo.getDate}}</span>  
+        <button md-mini-fab  (click)="deleteTodo (todo.getId)"><md-icon class="list__icon">delete_forever</md-icon></button>
+    </div>
+                       
+            </div>
+        </div>
     </section>
