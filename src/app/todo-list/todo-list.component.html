@@ -18,10 +18,10 @@
             </div>
            
             <div class="list__description-conteiner" *ngIf="todo.getDescription !== ''">
-                <h6 class = "list__description" (click)="showFader = !showFader">
+                <h6 class = "list__description" (click)= "test()">
                     Description
                 </h6>
-                <div class="list__description-text" *ngIf="!todo.getComplete" >
+                <div class="list__description-text">
                      {{todo.getDescription}}
                 </div>
             </div>

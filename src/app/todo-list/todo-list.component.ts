@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../todo';
+import $ from 'jquery/dist/jquery'
 
 @Component({
   selector: 'app-todo-list',
@@ -15,11 +16,17 @@ export class TodoListComponent implements OnInit {
     @Output()
    toggleComplete = new EventEmitter <Todo> ();
    todoDone: boolean = true;
-   showFader: boolean = false;
+   
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  test(){
+
+    let target = event.srcElement.nextElementSibling;
+    $(target).slideToggle();
   }
 
   toggleTodoComplete(todo: Todo) {
