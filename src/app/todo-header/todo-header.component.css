@@ -1,4 +1,14 @@
-header {}
+header {
+    position: fixed;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    z-index: 99999;
+}
 
 .header__title {
     font-family: "Roboto", "Helvetica Neue", sans-serif;

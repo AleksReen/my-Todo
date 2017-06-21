@@ -20,7 +20,16 @@ public description: string;
 
  ngOnInit() {
    this.todoBase = this.todoService.getTodoBase();
-   this.todoBaseList = this.todoBase.getTogoBase();
+   this.todoBaseList = this.todoBase.getTodoBase();
+ }
+
+ 
+
+ toggleTodo (todo:Todo){
+   
+    this.todoBase.toggleTodo(todo);
+    this.todoService.setTodoBase(this.todoBase);
+    this.ngOnInit();
  }
 
  addTodo (todo:Todo) : void {

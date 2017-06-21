@@ -21,6 +21,9 @@ export class TodoHeaderComponent implements OnInit {
   createTodo (){
     let todo = new Todo (this.title, this.description);
     this.create.emit(todo);
+    this.title = "";
+    this.description = "";
+
   }
 
 }

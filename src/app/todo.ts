@@ -65,6 +65,12 @@ export class Todo {
         return this._complete;
     }
 
+    
+    public set setComplete(v : boolean) {
+        this._complete = v;
+    }
+    
+
     public get getDescription() : string {
         return this._description;
     }

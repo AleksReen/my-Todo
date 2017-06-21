@@ -23,7 +23,7 @@ public static toJson(base: TodoBase) {
     constructor(){}
 
     
-    public getTogoBase() : Todo [] {
+    public getTodoBase() : Todo [] {
         return this._todoBase;
     }
     
@@ -38,7 +38,22 @@ public static toJson(base: TodoBase) {
         return this._todoBase;
     }
 
-    
 
+    toggleTodo (todo:Todo){
+
+
+         this._todoBase.forEach( el => { if (el.getId === todo.getId){
+         
+        if (el.getComplete) {
+             el.setComplete = false;
+        } else {
+             el.setComplete = true;
+        }
+
+        }
+        });
+        console.log(todo.getComplete)
+       return this._todoBase;
+    }
 
  }
