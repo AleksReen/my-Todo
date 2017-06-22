@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import {MdDialog} from '@angular/material';
 import { Todo } from '../todo';
+import { TodoAuthorComponent } from '../todo-author/todo-author.component';
 
 @Component({
   selector: 'app-todo-header',
@@ -24,7 +25,7 @@ export class TodoHeaderComponent implements OnInit {
   }
 
   openDialog () {
-    
+    this.dialog.open(TodoAuthorComponent);
   }
 
   createTodo (){

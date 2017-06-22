@@ -12,6 +12,7 @@ import { TodoFooterComponent } from './todo-footer/todo-footer.component';
 import { MaterialModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import { TodoAuthorComponent } from './todo-author/todo-author.component';
 
 
 
@@ -20,7 +21,11 @@ import {MdButtonModule, MdCheckboxModule} from '@angular/material';
     AppComponent,
     TodoHeaderComponent,
     TodoListComponent,
-    TodoFooterComponent
+    TodoFooterComponent,
+    TodoAuthorComponent
+  ],
+  entryComponents:[
+    TodoAuthorComponent
   ],
   imports: [
     BrowserModule,
