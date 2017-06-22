@@ -3,9 +3,9 @@ import { Todo } from './todo';
 export class TodoBase {
 
 private _todoBase: Todo [] = [
-    new Todo('Test1'),
-    new Todo('Test2'),
-    new Todo('Test3')
+    new Todo('TodoTitle1', 'TodoDescription1'),
+    new Todo('TodoTitle2', 'TodoDescription2'),
+    new Todo('TodoTitle3', 'TodoDescription3')
 ];
 
 public static toJson(base: TodoBase) {
@@ -29,7 +29,7 @@ public static toJson(base: TodoBase) {
     
 
     addTodo (todo:Todo) {
-        this._todoBase.push(todo);
+        this._todoBase.unshift(todo);
         return this._todoBase;
     }
 
