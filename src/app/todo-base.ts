@@ -52,7 +52,7 @@ public static toJson(base: TodoBase) {
 
         }
         });
-        console.log(todo.getComplete)
+       
        return this._todoBase;
     }
 

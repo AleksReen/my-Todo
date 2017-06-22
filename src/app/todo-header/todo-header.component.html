@@ -2,21 +2,21 @@
 
     <md-toolbar color="primary">
         <h1 class="header__title">my Todos</h1>
+        <h6>by AleksReen</h6>
     </md-toolbar>
-
     <br>
-
-
     <div class="header__conteiner-component">
-        <md-input-container class="example-full-width">
+        <md-input-container>
             <input mdInput placeholder="Todo" [(ngModel)]="title">
         </md-input-container>
 
-        <md-input-container class="example-full-width">
-            <textarea mdInput placeholder="Description" [(ngModel)]="description"></textarea>
+        <md-input-container>
+            <textarea class = "header__textarea" mdInput placeholder="Description" [(ngModel)]="description"></textarea>
         </md-input-container>
 
         <div class="header__conteiner-button">
+            <h6 class="header__allCount">All Todos: {{allTodosCount}}</h6>
+            <h6 class="header__doneCount">Done Todos: {{doneTodosCount}}</h6>
             <button md-fab (click)="createTodo ()"><md-icon>check</md-icon></button>
         </div>
     </div>

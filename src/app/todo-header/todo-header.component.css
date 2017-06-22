@@ -1,6 +1,6 @@
 header {
     position: fixed;
-    height: 270px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -8,6 +8,9 @@ header {
     left: 0px;
     top: 0px;
     z-index: 99999;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 
+                0 6px 10px 0 rgba(0,0,0,.14), 
+                0 1px 18px 0 rgba(0,0,0,.12);
 }
 
 .header__title {
@@ -15,6 +18,10 @@ header {
     text-align: center;
     color: rgba(255, 255, 255, 100);
     width: 100%;
+}
+
+.header__textarea {
+    resize: none;
 }
 
 .header__conteiner-component {
@@ -26,5 +33,43 @@ header {
 
 .header__conteiner-button {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.header__allCount {
+    color:#673ab7;
+}
+
+.header__doneCount{
+    color: green;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    header{
+        height: 270px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+
 }

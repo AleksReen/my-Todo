@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Todo } from '../todo';
 
 @Component({
@@ -12,6 +12,10 @@ export class TodoHeaderComponent implements OnInit {
   public description: string;
   @Output()
   create = new EventEmitter <Todo> ();
+  @Input()
+  allTodosCount:number;
+  @Input()
+  doneTodosCount:number;
 
   constructor() { }
 

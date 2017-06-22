@@ -13,7 +13,7 @@ export class TodoListComponent implements OnInit {
    todoBaseList: Todo[] = [];
    @Output()
    delete = new EventEmitter <number> ();
-    @Output()
+   @Output()
    toggleComplete = new EventEmitter <Todo> ();
    todoDone: boolean = true;
    
