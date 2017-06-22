@@ -1,7 +1,9 @@
 <section>
-    <div>
+
+    <div class="conteiner__header">
         <app-todo-header [(allTodosCount)] = "allTodosCount"  [(doneTodosCount)]= "doneTodosCount" (create)= "addTodo ($event)"></app-todo-header>
     </div>
+
     <app-todo-list [(todoBaseList)] = 'todoBaseList' (toggleComplete) ="toggleTodo($event)" (delete)="deleteTodo($event)"></app-todo-list>
 
     <app-todo-footer></app-todo-footer>

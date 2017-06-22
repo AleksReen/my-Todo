@@ -13,12 +13,10 @@
 }
 
 .list__conteiner {
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .list__conteiner-right {
@@ -50,7 +48,6 @@
     background-color: red;
     height: 30px;
     width: 30px;
-    
 }
 
 .list__icon{
@@ -61,10 +58,9 @@
 }
 
 .list__description-conteiner {
-position: relative;
-bottom: 10px;
+    position: relative;
+    bottom: 10px;
     background-color: white;
-
 }
 
 .list__description{
@@ -107,8 +103,7 @@ bottom: 10px;
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
-    .list__conteiner-right h3 {
+.list__conteiner-right h3 {
    font-size: 14px;
 }
 

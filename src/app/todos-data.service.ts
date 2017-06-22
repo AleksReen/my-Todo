@@ -5,13 +5,13 @@ import { TodoBase } from './todo-base';
 @Injectable()
 export class TodosDataService {
 
-private KEY: string = "MyTodoBase";
+private KEY: string = 'MyTodoBase';
 
   constructor() {
 
    }
 
-   public setTodoBase (td:TodoBase): void {
+   public setTodoBase (td: TodoBase): void {
      localStorage.setItem(this.KEY, JSON.stringify(TodoBase.toJson(td)));
    }
 

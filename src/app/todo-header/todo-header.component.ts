@@ -15,13 +15,16 @@ export class TodoHeaderComponent implements OnInit {
   @Output()
   create = new EventEmitter <Todo> ();
   @Input()
-  allTodosCount:number;
+  allTodosCount: number;
   @Input()
-  doneTodosCount:number;
+  doneTodosCount: number;
 
-  constructor(public dialog: MdDialog) { }
+  constructor(public dialog: MdDialog) { 
+
+  }
 
   ngOnInit() {
+
   }
 
   openDialog () {
@@ -31,8 +34,7 @@ export class TodoHeaderComponent implements OnInit {
   createTodo (){
     let todo = new Todo (this.title, this.description);
     this.create.emit(todo);
-    this.title = "";
-    this.description = "";
-
+    this.title = '';
+    this.description = '';
   }
 }

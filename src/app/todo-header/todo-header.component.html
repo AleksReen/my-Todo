@@ -1,15 +1,16 @@
 <header>
 
     <md-toolbar color="primary">
-        <h1 class="header__title">my Todos</h1>
 
-    <div>
-        <button md-raised-button color="primary" (click)="openDialog()">by AleksReen</button>
-    </div>
-        
-    </md-toolbar>
-    <br>
+        <h1 class="header__title">my Todos</h1>
+        <div>
+            <button md-raised-button color="primary" (click)="openDialog()">by AleksReen</button>
+        </div>
+
+    </md-toolbar><br>
+
     <div class="header__conteiner-component">
+
         <md-input-container>
             <input mdInput placeholder="Todo" [(ngModel)]="title">
         </md-input-container>
@@ -23,7 +24,7 @@
             <h6 class="header__doneCount">Done Todos: {{doneTodosCount}}</h6>
             <button md-fab (click)="createTodo ()"><md-icon>check</md-icon></button>
         </div>
-    </div>
 
+    </div>
 
 </header>

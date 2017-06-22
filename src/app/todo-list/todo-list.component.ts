@@ -8,7 +8,7 @@ import $ from 'jquery/dist/jquery';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  
+
    @Input()
    todoBaseList: Todo[] = [];
    @Output()
@@ -16,19 +16,18 @@ export class TodoListComponent implements OnInit {
    @Output()
    toggleComplete = new EventEmitter <Todo> ();
    todoDone: boolean = true;
-   
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleDescription() : void {
+  toggleDescription(): void {
     let target = event.srcElement.nextElementSibling;
     $(target).slideToggle();
   }
 
-  toggleTodoComplete(todo: Todo) {
+  toggleTodoComplete(todo: Todo): void {
     this.toggleComplete.emit(todo);
   }
 

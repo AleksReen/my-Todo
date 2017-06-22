@@ -18,7 +18,9 @@ public allTodosCount: number;
 public doneTodosCount: number;
 
 
- constructor (private todoService: TodosDataService) {}
+ constructor (private todoService: TodosDataService) {
+
+ }
 
  ngOnInit() {
 
@@ -27,26 +29,25 @@ public doneTodosCount: number;
    this.counterTodos(this.todoBaseList);
  }
 
- toggleTodo (todo:Todo){
-   
+ toggleTodo (todo: Todo){
     this.todoBase.toggleTodo(todo);
     this.todoService.setTodoBase(this.todoBase);
     this.ngOnInit();
  }
 
- addTodo (todo:Todo) : void {
+ addTodo (todo: Todo): void {
    this.todoBaseList = this.todoBase.addTodo(todo);
    this.todoService.setTodoBase(this.todoBase);
    this.counterTodos(this.todoBaseList);
  }
 
- deleteTodo (id:number) : void {
+ deleteTodo (id: number): void {
    this.todoBaseList = this.todoBase.deleteTodo(id);
    this.todoService.setTodoBase(this.todoBase);
    this.counterTodos(this.todoBaseList);
  }
 
-  counterTodos(list:Todo[]): void {
+  counterTodos(list: Todo[]): void {
     this.allTodosCount = list.length;
     list = list.filter(todo => todo.getComplete === true);
     this.doneTodosCount = list.length;

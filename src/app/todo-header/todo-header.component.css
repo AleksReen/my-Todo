@@ -63,9 +63,9 @@ header {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-    header{
-        height: 270px;
-    }
+header{
+    height: 270px;
+}
 }
 
 /* Custom, iPhone Retina */

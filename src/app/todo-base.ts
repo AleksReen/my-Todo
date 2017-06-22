@@ -2,13 +2,16 @@ import { Todo } from './todo';
 
 export class TodoBase {
 
-private _todoBase: Todo [] = [
-    new Todo('TodoTitle1', 'TodoDescription1'),
-    new Todo('TodoTitle2', 'TodoDescription2'),
-    new Todo('TodoTitle3', 'TodoDescription3')
-];
+    private _todoBase: Todo [] = [
 
-public static toJson(base: TodoBase) {
+        new Todo('TodoTitle1', 'TodoDescription1'),
+        new Todo('TodoTitle2', 'TodoDescription2'),
+        new Todo('TodoTitle3', 'TodoDescription3')
+
+    ];
+
+    public static toJson(base: TodoBase) {
+
         return {
             todoBase: base._todoBase.map( todo => Todo.toJson(todo)),
         };
@@ -20,40 +23,33 @@ public static toJson(base: TodoBase) {
         return base;
     }
 
-    constructor(){}
+    constructor() {
 
-    
-    public getTodoBase() : Todo [] {
+    }
+
+    public getTodoBase(): Todo [] {
         return this._todoBase;
     }
-    
 
-    addTodo (todo:Todo) {
+    addTodo (todo: Todo): Todo [] {
         this._todoBase.unshift(todo);
         return this._todoBase;
     }
 
-    deleteTodo (id:number) {
+    deleteTodo (id: number): Todo [] {
         this._todoBase = this._todoBase.filter ( todo => todo.getId != id );
         return this._todoBase;
     }
 
-
-    toggleTodo (todo:Todo){
-
-
-         this._todoBase.forEach( el => { if (el.getId === todo.getId){
-         
-        if (el.getComplete) {
-             el.setComplete = false;
-        } else {
-             el.setComplete = true;
-        }
-
-        }
+    toggleTodo (todo: Todo): Todo [] {
+         this._todoBase.forEach( el => { if (el.getId === todo.getId) {
+                if (el.getComplete) {
+                     el.setComplete = false;
+                } else {
+                     el.setComplete = true;
+                }
+            }
         });
-       
        return this._todoBase;
     }
-
  }
