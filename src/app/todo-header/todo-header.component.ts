@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import {MdDialog} from '@angular/material';
 import { Todo } from '../todo';
 
 @Component({
@@ -17,9 +18,13 @@ export class TodoHeaderComponent implements OnInit {
   @Input()
   doneTodosCount:number;
 
-  constructor() { }
+  constructor(public dialog: MdDialog) { }
 
   ngOnInit() {
+  }
+
+  openDialog () {
+    
   }
 
   createTodo (){
@@ -29,5 +34,4 @@ export class TodoHeaderComponent implements OnInit {
     this.description = "";
 
   }
-
 }
