@@ -41,6 +41,11 @@ export class TodoBase {
         return this._todoBase;
     }
 
+    deleteAllTodoDone():Todo []{
+        this._todoBase = this._todoBase.filter (todo => todo.getComplete != true);
+        return this._todoBase;
+    }
+
     toggleTodo (todo: Todo): Todo [] {
          this._todoBase.forEach( el => { if (el.getId === todo.getId) {
                 if (el.getComplete) {

@@ -14,6 +14,8 @@ export class TodoHeaderComponent implements OnInit {
   public description: string;
   @Output()
   create = new EventEmitter <Todo> ();
+  @Output()
+  deleteAllDone = new EventEmitter <any> ();
   @Input()
   allTodosCount: number;
   @Input()
@@ -25,6 +27,11 @@ export class TodoHeaderComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  deleteTodoDone(){
+    console.log(`well done`);
+    this.deleteAllDone.emit();
   }
 
   openDialog () {

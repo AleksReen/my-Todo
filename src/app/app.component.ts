@@ -29,6 +29,13 @@ public doneTodosCount: number;
    this.counterTodos(this.todoBaseList);
  }
 
+ deleteAllDone(){
+   
+   this.todoBaseList = this.todoBase.deleteAllTodoDone();
+   this.todoService.setTodoBase(this.todoBase);
+   this.counterTodos(this.todoBaseList);
+ }
+
  toggleTodo (todo: Todo){
     this.todoBase.toggleTodo(todo);
     this.todoService.setTodoBase(this.todoBase);

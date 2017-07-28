@@ -34,6 +34,7 @@ header {
 .header__conteiner-button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header__allCount {
@@ -42,6 +43,11 @@ header {
 
 .header__doneCount{
     color: green;
+}
+
+.header__delete-done-button{
+    color:white;
+    background-color: green;
 }
 
 /*==========  Desktop First Method  ==========*/
